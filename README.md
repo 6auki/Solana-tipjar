@@ -11,8 +11,7 @@
   - The tip is recorded on-chain; Alice sees the message and goal progress update
 
 ---
-> If you are new to web3 you can check my [Medium Article]("") where I explain everythin in detail.
-
+> If you are new to web3 you can check my [Medium Article]("") where I explain everything in detail.
 ---
 
 ## Features
