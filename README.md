@@ -47,7 +47,7 @@ cd my-tipjar-project
 ```
 
 ### Replace the default lib.rs file:
-1. Navigate to programs/my-tipjar-project/src/
+1. Navigate to **programs/my-tipjar-project/src/**
 2. Replace the contents of lib.rs with the provided lib.rs code
 
 ### Create a new state.rs file:
