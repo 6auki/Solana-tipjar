@@ -1,6 +1,7 @@
 # TipJar
 **TipJar** is a decentralized tipping platform built on the Solana blockchain using the Anchor framework. It allows users to create personalized tip jars, receive SOL with optional messages, and manage tipping goals — all on-chain. This repository contains the core smart contract files (`lib.rs` and `state.rs`), and is the companion to the ["Write Your First Solana Project"](https://medium.com/...) article on Medium.
 
+---
 
 > ⚠️ **Note:** This is *not* a full Anchor project. This repo includes only `lib.rs` and `state.rs`, which are meant to be integrated into your own Anchor setup.
 
