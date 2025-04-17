@@ -43,7 +43,8 @@ This repository contains only the lib.rs and state.rs code, which are core smart
 ##### Create a New Solana Project
 ```sh
 anchor init my-tipjar-project
-cd my-tipjar-project```
+cd my-tipjar-project
+```
 
 ### Replace the default lib.rs file:
 1. Navigate to programs/my-tipjar-project/src/
@@ -56,7 +57,8 @@ cd my-tipjar-project```
 ### Building and Depoying
 1. First build
 ```sh
-anchor build```
+anchor build
+```
 
 2. Update the program ID:
 - After building, a new program ID will be generated
@@ -64,11 +66,13 @@ anchor build```
 
 3. Deploy to localnet for testing:
 ```sh
-anchor test```
+anchor test
+```
 
 4. Deploy to devnet:
 ```sh
-anchor deploy --provider.cluster devnet```
+anchor deploy --provider.cluster devnet
+```
 
 ### Smart Contract Overview
 ### Program Architecture
