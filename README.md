@@ -2,25 +2,28 @@
 **TipJar** is a decentralized tipping platform built on the Solana blockchain using the Anchor framework. It allows users to create personalized tip jars, receive SOL with optional messages, and manage tipping goals — all on-chain. This repository contains the core smart contract files (`lib.rs` and `state.rs`), and is the companion to the ["Write Your First Solana Project"](https://medium.com/...) article on Medium.
 
 > ⚠️ **Note:** This is *not* a full Anchor project. This repo includes only `lib.rs` and `state.rs`, which are meant to be integrated into your own Anchor setup.
-> 
+
 ---
 
 ### Example Use Case
-- Alice creates a Tip Jar for her Solana dev blog
-- Bob sends 0.5 SOL with a thank-you message
-- The tip is recorded on-chain; Alice sees the message and goal progress update
+  - Alice creates a Tip Jar for her Solana dev blog
+  - Bob sends 0.5 SOL with a thank-you message
+  - The tip is recorded on-chain; Alice sees the message and goal progress update
+
+---
+> If you are new to web3 you can check my [Medium Article]("") where I explain everythin in detail.
 
 ---
 
 ## Features
-- Create Personalized Tip Jars: Set descriptions, categories, and funding goals
-- Receive Tips in SOL: Accept donations in Solana's native token
-- Public or Anonymous Tips: Choose to reveal or hide the tipper’s identity
-- Attach Messages: Tippers can include personalized messages with their tips
-- Goal Tracking: Set fundraising goals and track progress
-- Efficient Tip History: Circular buffer keeps limited history without excessive storage costs
-- Owner Controls: Pause/resume tips, update details, withdraw funds
-- Security First: Proper authorization checks throughout
+  - Create Personalized Tip Jars: Set descriptions, categories, and funding goals
+  - Receive Tips in SOL: Accept donations in Solana's native token
+  - Public or Anonymous Tips: Choose to reveal or hide the tipper’s identity
+  - Attach Messages: Tippers can include personalized messages with their tips
+  - Goal Tracking: Set fundraising goals and track progress
+  - Efficient Tip History: Circular buffer keeps limited history without excessive storage costs
+  - Owner Controls: Pause/resume tips, update details, withdraw funds
+  - Security First: Proper authorization checks throughout
 
 ---
 
@@ -61,8 +64,8 @@ anchor build
 ```
 
 2. Update the program ID:
-- After building, a new program ID will be generated
-- Update the declare_id! macro in lib.rs with your program ID
+    - After building, a new program ID will be generated
+    - Update the declare_id! macro in lib.rs with your program ID
 
 3. Deploy to localnet for testing:
 ```sh
@@ -80,20 +83,20 @@ The TipJar program is built on Anchor framework and consists of several key comp
 
 1. TipJar Account: A PDA (Program Derived Address) that stores tip jar metadata including owner, description, goal amount, and a history of received tips.
 2. Instructions:
-- initialize_tipjar: Creates a new tip jar
-- send_tip: Sends SOL to a tip jar with an optional message
-- withdraw_tip: Allows the owner to withdraw funds
-- toggle_tipjar_status: Pauses or resumes a tip jar
-- update_tipjar: Updates tip jar metadata
-- close_tipjar: Closes a tip jar and returns rent
+    - initialize_tipjar: Creates a new tip jar
+    - send_tip: Sends SOL to a tip jar with an optional message
+    - withdraw_tip: Allows the owner to withdraw funds
+    - toggle_tipjar_status: Pauses or resumes a tip jar
+    - update_tipjar: Updates tip jar metadata
+    - close_tipjar: Closes a tip jar and returns rent
 3. Events: Emitted for frontend tracking and notifications
-- TipSent: When a tip is sent
-- GoalReached: When a tip jar reaches its funding goal
-- TipJarStatusChanged: When a tip jar's status changes
+    - TipSent: When a tip is sent
+    - GoalReached: When a tip jar reaches its funding goal
+    - TipJarStatusChanged: When a tip jar's status changes
 4. Security Considerations:
-- Access control with has_one = owner constraints
-- Input validation with require! statements
-- Withdrawal limits to prevent large, sudden withdrawals
+    - Access control with has_one = owner constraints
+    - Input validation with require! statements
+    - Withdrawal limits to prevent large, sudden withdrawals
 
 
 ### Circular Buffer for Tips
