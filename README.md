@@ -113,7 +113,8 @@ if tip_jar.tips_history.len() < TipJar::MAX_TIP_HISTORY_LEN {
 }
 ```
 
-# License
-This project is licensed under the MIT License - see the LICENSE file for details.
 # Contributing
 Contributions are welcome! Feel free to open an issue or submit a pull request. :))
+
+# License
+MIT
